@@ -137,8 +137,15 @@ install_dotfiles () {
   done
 }
 
+color_theme () {
+  info 'setting the themes'
+  `$DOTFILES_ROOT/tomorrow/setup-theme.sh`
+  success "set theme to Tomorrow"
+}
+
 setup_gitconfig
 install_dotfiles
+color_theme
 
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]
