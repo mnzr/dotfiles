@@ -1,4 +1,24 @@
+" We want to unlock the full potential of vim. That's what
 set nocompatible
+
+" --- General settings ---
+set backspace=indent,eol,start
+set ruler
+set number
+set showcmd
+set incsearch
+set hlsearch
+
+syntax on
+
+" Enable mouse click
+set mouse=a
+
+
+
+
+
+
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/

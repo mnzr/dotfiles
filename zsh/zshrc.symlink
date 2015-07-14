@@ -45,11 +45,11 @@ ZSH_THEME="terminalparty"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git django python sublime-text)
+plugins=(git gitflow nvm django python sublime-text)
 
 # User configuration
 
-export PATH="./bin:/usr/local/bin:/usr/local/sbin:/home/ratul/.dotfiles/bin:/home/ratul/Code/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/ratul/.composer/vendor/bin"
+export PATH="./bin:/usr/local/bin:/usr/local/sbin:/home/ratul/.dotfiles/bin:/home/ratul/Code/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/ratul/.composer/vendor/bin:/home/ratul/.bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.symlink/oh-my-zsh.sh
@@ -79,17 +79,21 @@ source $ZSH/oh-my-zsh.symlink/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Virtualenvwrapper
+## Virtualenvwrapper
 export WORKON_HOME=~/Devel/Envs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 source /usr/local/bin/virtualenvwrapper.sh
 
-
+## Pyenv
 # export PYENV_ROOT="$HOME/.pyenv"
 # export PATH="$PYENV_ROOT/bin:$PATH"
 # eval "$(pyenv init -)"
 
-# Node bin
-
 ## The Fuck
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
+
+## Node
+export NVM_DIR="/home/ratul/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+source ~/.nvm/nvm.sh
+# alias git=hub
