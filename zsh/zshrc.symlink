@@ -100,3 +100,6 @@ source ~/.nvm/nvm.sh
 
 
 export TERM="xterm-256color"
+
+# vim alias
+alias vim=/usr/bin/vim
