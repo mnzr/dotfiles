@@ -1,4 +1,4 @@
-colorscheme Tomorrow-Night
+colorscheme Tomorrow-Night-Eighties
 " Easily change modes
 inoremap qq <Esc>
 nnoremap qq i
@@ -6,6 +6,11 @@ nnoremap qq i
 noremap <C-Tab> :bnext<CR>
 noremap <C-q> :bd<CR>
 nnoremap <Tab> :buffers<CR>:buffer<Space>
+
+" FOnt settings
+" set guifont=DejaVu\ Sans\ Mono\ 12
+" set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 12
+set guifont=Fira\ Mono\ for\ Powerline\ 12
 
 " Rainbow delimiters settings
 let g:rbpt_colorpairs = [
