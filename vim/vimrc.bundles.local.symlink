@@ -5,3 +5,6 @@ Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fireplace'
 Plugin 'kien/rainbow_parentheses.vim'
+
+" Julia plugins
+Plugin 'JuliaLang/julia-vim'
