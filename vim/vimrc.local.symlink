@@ -1,5 +1,5 @@
-" colorscheme Tomorrow-Night-Eighties
-colorscheme Tomorrow
+colorscheme Tomorrow-Night
+" colorscheme Tomorrow
 " Easily change modes
 inoremap qq <Esc>
 nnoremap qq i
