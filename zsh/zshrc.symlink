@@ -49,7 +49,7 @@ plugins=(git gitflow nvm django python sublime-text)
 
 # User configuration
 
-export PATH="./bin:/usr/local/bin:/usr/local/sbin:/home/ratul/.dotfiles/bin:/home/ratul/Code/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/ratul/.composer/vendor/bin:/home/ratul/.bin"
+export PATH="./bin:/usr/local/bin:/usr/local/sbin:/home/$USER/.dotfiles/bin:/home/$USER/Code/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/$USER/.composer/vendor/bin:/home/$USER/.bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.symlink/oh-my-zsh.sh
@@ -72,8 +72,8 @@ source $ZSH/oh-my-zsh.symlink/oh-my-zsh.sh
 
 ## Virtualenvwrapper
 export WORKON_HOME=~/Devel/Envs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
-source /usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 ## Pyenv
 # export PYENV_ROOT="$HOME/.pyenv"
@@ -81,7 +81,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 # eval "$(pyenv init -)"
 
 # Go Env
-# GOPATH=/home/ratul/Devel/Go
+# GOPATH=/home/$USER/Devel/Go
 # GOPATH=$HOME/.go
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
@@ -96,9 +96,12 @@ alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 export PATH="$PATH:$HOME/.rvm/bin"
 
 ## Node
-# export NVM_DIR="/home/ratul/.nvm"
+# export NVM_DIR="/home/$USER/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 # source ~/.nvm/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+. "/home/$USER/.linuxbrew/opt/nvm/nvm.sh"
+
 
 
 export TERM="xterm-256color"
@@ -119,4 +122,8 @@ alias py3=python3
 # eval "$(hub alias -s)"
 
 
+# Linuxbrew
+export PATH="/home/$USER/.linuxbrew/bin:$PATH"
+export MANPATH="/home/$USER/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="/home/$USER/.linuxbrew/share/info:$INFOPATH"
 
