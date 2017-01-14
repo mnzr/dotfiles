@@ -70,41 +70,6 @@ source $ZSH/oh-my-zsh.symlink/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-## Virtualenvwrapper
-export WORKON_HOME=~/Devel/Envs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-
-## Pyenv
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
-
-# Go Env
-# GOPATH=/home/$USER/Devel/Go
-# GOPATH=$HOME/.go
-export GOPATH=$HOME/.go
-export PATH=$PATH:$GOPATH/bin
-
-# added by Anaconda3 2.3.0 installer
-export PATH="$HOME/.anaconda3/bin:$PATH"
-
-## The Fuck
-alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
-
-# Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.rvm/bin"
-
-## Node
-# export NVM_DIR="/home/$USER/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-# source ~/.nvm/nvm.sh
-export NVM_DIR="$HOME/.nvm"
-. "/home/$USER/.linuxbrew/opt/nvm/nvm.sh"
-
-
-
-export TERM="xterm-256color"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -121,9 +86,33 @@ alias py=python
 alias py3=python3
 # eval "$(hub alias -s)"
 
+###################
+## USER SETTINGS ##
+###################
 
 # Linuxbrew
 export PATH="/home/$USER/.linuxbrew/bin:$PATH"
 export MANPATH="/home/$USER/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="/home/$USER/.linuxbrew/share/info:$INFOPATH"
+
+
+## Virtualenvwrapper
+export WORKON_HOME=~/Devel/Envs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3 
+# source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+source /home/$USER/.local/bin/virtualenvwrapper.sh
+
+
+# added by Anaconda3 2.3.0 installer
+export PATH="$HOME/.anaconda3/bin:$PATH"
+
+## Node
+export NVM_DIR="$HOME/.nvm"
+. "/home/$USER/.linuxbrew/opt/nvm/nvm.sh"
+
+
+## Terminal settings
+export TERM="xterm-256color"
+
+
 
