@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+# dot
+#
+# `dot` handles installation, updates, things like that. Run it periodically
+# to make sure you're on the latest and greatest.
+export ZSH=$HOME/.dotfiles
+
+# Set OS X defaults
+# $ZSH/osx/set-defaults.sh
+
+# Install Brew on Ubuntu
+git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew
+
+# Test Brew
+# /home/$USER/.linuxbrew/bin/brew
+
+# Upgrade homebrew
+/home/$USER/.linuxbrew/bin/brew update -vd
+
+# Install nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+nvm install stable
+
+# Install homebrew packages
+# $ZSH/homebrew/install.sh 2>&1
+
+
+

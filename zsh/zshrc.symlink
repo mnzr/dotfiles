@@ -77,13 +77,9 @@ source $ZSH/oh-my-zsh.symlink/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="qvim ~/.zshrc"
+# alias zshconfig="qvim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 setopt completealiases
-alias qv=qvim
-alias wk=workon
-alias py=python
-alias py3=python3
 # eval "$(hub alias -s)"
 
 ###################
@@ -91,24 +87,33 @@ alias py3=python3
 ###################
 
 # Linuxbrew
-export PATH="/home/$USER/.linuxbrew/bin:$PATH"
-export MANPATH="/home/$USER/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="/home/$USER/.linuxbrew/share/info:$INFOPATH"
+# Until LinuxBrew is fixed, the following is required.
+# See: https://github.com/Homebrew/linuxbrew/issues/47
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib64/pkgconfig:/usr/lib64/pkgconfig:/usr/lib/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib64/pkgconfig:/usr/share/pkgconfig:$PKG_CONFIG_PATH
+## Setup linux brew
+export LINUXBREWHOME=$HOME/.linuxbrew
+export PATH=$LINUXBREWHOME/bin:$PATH
+export MANPATH=$LINUXBREWHOME/man:$MANPATH
+export PKG_CONFIG_PATH=$LINUXBREWHOME/lib64/pkgconfig:$LINUXBREWHOME/lib/pkgconfig:$PKG_CONFIG_PATH
+export LD_LIBRARY_PATH=$LINUXBREWHOME/lib64:$LINUXBREWHOME/lib:$LD_LIBRARY_PATH
 
 
 ## Virtualenvwrapper
 export WORKON_HOME=~/Devel/Envs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3 
 # source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-source /home/$USER/.local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 
 # added by Anaconda3 2.3.0 installer
 export PATH="$HOME/.anaconda3/bin:$PATH"
 
 ## Node
+# export NVM_DIR="$HOME/.nvm"
+# . "/home/$USER/.linuxbrew/opt/nvm/nvm.sh"
 export NVM_DIR="$HOME/.nvm"
-. "/home/$USER/.linuxbrew/opt/nvm/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 ## Terminal settings
