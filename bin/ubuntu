@@ -10,13 +10,13 @@ export ZSH=$HOME/.dotfiles
 # $ZSH/osx/set-defaults.sh
 
 # Install Brew on Ubuntu
-git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew
+git clone https://github.com/Homebrew/linuxbrew.git $HOME/.linuxbrew/
 
 # Test Brew
 # /home/$USER/.linuxbrew/bin/brew
 
 # Upgrade homebrew
-/home/$USER/.linuxbrew/bin/brew update -vd
+/home/$USER/.linuxbrew/bin/brew update --vd
 
 # Install nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
